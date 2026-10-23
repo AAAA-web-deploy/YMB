@@ -57,7 +57,7 @@ export default function ReferenceSite() {
         <a className="icon-link" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer" aria-label="YMB on X">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
-        <a className="btn btn--gold btn--sm" data-link="buy" href={siteConfig.buyUrl} target="_blank" rel="noopener noreferrer">Buy $YMB</a>
+        <button className="btn btn--ghost btn--sm" type="button" data-copy-ca aria-live="polite">Copy CA</button>
         <button className="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
@@ -89,7 +89,6 @@ export default function ReferenceSite() {
         </h1>
         <p className="hero__sub">You watched. You waited. You missed.</p>
         <div className="hero__ctas">
-          <a className="btn btn--gold" data-link="buy" href={siteConfig.buyUrl} target="_blank" rel="noopener noreferrer">Buy $YMB</a>
           <button className="btn btn--ghost" type="button" data-copy-ca aria-live="polite">Copy CA</button>
         </div>
         <p className="hero__community">
@@ -217,7 +216,7 @@ export default function ReferenceSite() {
           <li className="step reveal">
             <span className="step__num">03</span>
             <h3 className="step__title">Open the swap</h3>
-            <p className="step__text">Use the Buy $YMB button to open the configured token page.</p>
+            <p className="step__text">Paste the contract address into your DEX swap (for example, Uniswap).</p>
           </li>
           <li className="step reveal">
             <span className="step__num">04</span>
@@ -237,7 +236,6 @@ export default function ReferenceSite() {
               <button className="ca__copy" type="button" data-copy-ca aria-live="polite">Copy</button>
             </div>
           </div>
-          <a className="btn btn--gold btn--lg reveal" data-link="buy" href={siteConfig.buyUrl} target="_blank" rel="noopener noreferrer">Buy $YMB</a>
         </div>
       </div>
     </section>
@@ -249,7 +247,7 @@ export default function ReferenceSite() {
         <span className="final__rule reveal" aria-hidden="true"></span>
         <p className="final__sub reveal">The next click is yours.</p>
         <div className="final__ctas reveal">
-          <a className="btn btn--gold btn--lg" data-link="buy" href={siteConfig.buyUrl} target="_blank" rel="noopener noreferrer">Buy $YMB</a>
+          <button className="btn btn--ghost btn--lg" type="button" data-copy-ca aria-live="polite">Copy CA</button>
           <a className="btn btn--ghost btn--lg" data-link="tg" href={siteConfig.tgUrl} target="_blank" rel="noopener noreferrer">Telegram</a>
           <a className="btn btn--ghost btn--lg" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">Follow on X</a>
         </div>
@@ -269,7 +267,6 @@ export default function ReferenceSite() {
         <nav className="footer__links" aria-label="Footer">
           <a className="underline-link" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">X</a>
           <a className="underline-link" data-link="tg" href={siteConfig.tgUrl} target="_blank" rel="noopener noreferrer">Telegram</a>
-          <a className="underline-link" data-link="buy" href={siteConfig.buyUrl} target="_blank" rel="noopener noreferrer">Buy</a>
         </nav>
       </div>
       <div className="footer__legal">
