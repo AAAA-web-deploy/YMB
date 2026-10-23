@@ -267,6 +267,8 @@ export default function ReferenceSite() {
         <nav className="footer__links" aria-label="Footer">
           <a className="underline-link" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">X</a>
           <a className="underline-link" data-link="tg" href={siteConfig.tgUrl} target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a className="underline-link" data-link="chart" href={siteConfig.dexscreenerUrl} target="_blank" rel="noopener noreferrer">Dexscreener</a>
+          <a className="underline-link" data-link="dextools" href={siteConfig.dextoolsUrl} target="_blank" rel="noopener noreferrer">Dextools</a>
         </nav>
       </div>
       <div className="footer__legal">
