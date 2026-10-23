@@ -1,0 +1,7 @@
+node_modules/
+.next/
+out/
+.env*.local
+*.tsbuildinfo
+UnRAR.exe
+license.txt

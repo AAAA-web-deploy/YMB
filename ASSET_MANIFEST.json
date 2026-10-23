@@ -1,0 +1,61 @@
+{
+  "reference": "https://www.ymboneth.lol/",
+  "date": "2026-10-23",
+  "assets": [
+    {
+      "path": "public/assets/banner.png",
+      "bytes": 2801621,
+      "sha256": "84c7ffbe3a0729c4ac5a33db208cf41712e4c60556f533c641e2bc01ab910245"
+    },
+    {
+      "path": "public/assets/fonts/anton-400.ttf",
+      "bytes": 130324,
+      "sha256": "fd9301f2837c99df2be07cc7f0be66e9470f5354d8fcf1606027c67fcd637a53"
+    },
+    {
+      "path": "public/assets/fonts/anton-OFL.txt",
+      "bytes": 4484,
+      "sha256": "ee67e6ee22790b7929f1a3769ca2801d565c64b5a9096942c1adf5596de9c9e4"
+    },
+    {
+      "path": "public/assets/fonts/fonts.css",
+      "bytes": 745,
+      "sha256": "f5319c5a137b29fd258f33b27da2e201661cc6e2fb60a1d10b1e89dab7e361ed"
+    },
+    {
+      "path": "public/assets/fonts/inter-400.ttf",
+      "bytes": 324820,
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    {
+      "path": "public/assets/fonts/inter-500.ttf",
+      "bytes": 325304,
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+    },
+    {
+      "path": "public/assets/fonts/inter-600.ttf",
+      "bytes": 326048,
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+    },
+    {
+      "path": "public/assets/fonts/inter-700.ttf",
+      "bytes": 326468,
+      "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c"
+    },
+    {
+      "path": "public/assets/fonts/inter-OFL.txt",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "path": "public/assets/hero.png",
+      "bytes": 2419412,
+      "sha256": "ec893843ec5bffa24d26bf30a3bea51b558a3171dc7c5b3cb2226af90c18bf06"
+    },
+    {
+      "path": "public/assets/logo.png",
+      "bytes": 3206491,
+      "sha256": "e4fcd95c55a3da287859003dddf69b049f541536bba43a81060178a9b68e415c"
+    }
+  ]
+}
