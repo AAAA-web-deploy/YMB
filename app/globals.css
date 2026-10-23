@@ -208,6 +208,7 @@ ol { margin: 0; padding: 0; list-style: none; }
   border-color: rgba(244, 196, 90, .45);
 }
 .btn--ghost:hover { border-color: var(--gold); color: var(--gold-hi); background: rgba(244, 196, 90, .06); }
+.btn--ghost.is-copied { border-color: var(--gold); color: var(--bg); background: var(--gold); }
 
 .btn--sm { --pad-y: 10px; --pad-x: 20px; min-height: 42px; font-size: 13px; }
 .btn--lg { --pad-y: clamp(18px, 0.8vw + 12px, 26px); --pad-x: clamp(32px, 2vw + 16px, 60px); }

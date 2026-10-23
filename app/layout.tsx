@@ -5,12 +5,12 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  title: "You Missed Bitches ($YMB) — The Three Letters After the Move",
-  description: "You Missed Bitches ($YMB). An Ethereum memecoin. The three letters after the move.",
+  title: "You Missed Bitches ($YMB) — You watched. You waited. You missed.",
+  description: "You Missed Bitches ($YMB). An Ethereum memecoin. You watched. You waited. You missed.",
   icons: { icon: assetPath("assets/logo.png") },
   openGraph: {
     title: "You Missed Bitches ($YMB)",
-    description: "The three letters after the move.",
+    description: "You watched. You waited. You missed.",
     images: [assetPath("assets/banner.png")],
   },
   twitter: { card: "summary_large_image" },

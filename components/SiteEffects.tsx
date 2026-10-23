@@ -22,8 +22,8 @@ export default function SiteEffects() {
       return observer;
     };
 
-    const copyBtn = document.querySelector<HTMLButtonElement>("[data-copy-ca]");
-    let copyTimer: ReturnType<typeof setTimeout> | undefined;
+    const copyBtns = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-copy-ca]"));
+    const copyTimers = new Map<HTMLButtonElement, ReturnType<typeof setTimeout>>();
     const copyText = async (text: string) => {
       if (navigator.clipboard && window.isSecureContext) {
         try { await navigator.clipboard.writeText(text); return true; } catch { /* fallback */ }
@@ -40,17 +40,23 @@ export default function SiteEffects() {
       textarea.remove();
       return ok;
     };
-    copyBtn?.addEventListener("click", async () => {
-      const ok = await copyText(siteConfig.ca);
-      if (abort.signal.aborted) return;
-      copyBtn.textContent = ok ? "Copied" : "Failed";
-      copyBtn.classList.toggle("is-copied", ok);
-      if (copyTimer) { clearTimeout(copyTimer); timers.delete(copyTimer); }
-      copyTimer = later(() => {
-        copyBtn.textContent = "Copy";
-        copyBtn.classList.remove("is-copied");
-      }, 1600);
-    }, { signal: abort.signal });
+    copyBtns.forEach((copyBtn) => {
+      const defaultLabel = copyBtn.textContent?.trim() || "Copy";
+      copyBtn.addEventListener("click", async () => {
+        const ok = await copyText(siteConfig.ca);
+        if (abort.signal.aborted) return;
+        copyBtn.textContent = ok ? "Copied" : "Failed";
+        copyBtn.classList.toggle("is-copied", ok);
+        const existing = copyTimers.get(copyBtn);
+        if (existing) { clearTimeout(existing); timers.delete(existing); }
+        const copyTimer = later(() => {
+          copyBtn.textContent = defaultLabel;
+          copyBtn.classList.remove("is-copied");
+          copyTimers.delete(copyBtn);
+        }, 1600);
+        copyTimers.set(copyBtn, copyTimer);
+      }, { signal: abort.signal });
+    });
 
     const nav = document.querySelector<HTMLElement>(".nav");
     const toggle = document.querySelector<HTMLButtonElement>(".nav__toggle");
@@ -95,7 +101,7 @@ export default function SiteEffects() {
           if (entry.isIntersecting) navLinks.forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === `#${entry.target.id}`));
         });
       }, { rootMargin: "-45% 0px -50% 0px" });
-      ["about", "how-to-buy", "chart"].forEach((id) => {
+      ["about", "how-to-buy"].forEach((id) => {
         const el = document.getElementById(id);
         if (el) activeObserver.observe(el);
       });

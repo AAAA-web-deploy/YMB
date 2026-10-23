@@ -48,7 +48,6 @@ export default function ReferenceSite() {
       <nav className="nav__links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#how-to-buy">How to Buy</a>
-        <a href="#chart">Chart</a>
       </nav>
 
       <div className="nav__actions">
@@ -66,7 +65,6 @@ export default function ReferenceSite() {
       <nav aria-label="Mobile">
         <a href="#about">About</a>
         <a href="#how-to-buy">How to Buy</a>
-        <a href="#chart">Chart</a>
         <a data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">Follow on X</a>
       </nav>
     </div>
@@ -85,10 +83,10 @@ export default function ReferenceSite() {
           <span className="hero__line"><span>Missed</span></span>
           <span className="hero__line hero__line--accent"><span>Bitches.</span></span>
         </h1>
-        <p className="hero__sub">The three letters after the move.</p>
+        <p className="hero__sub">You watched. You waited. You missed.</p>
         <div className="hero__ctas">
           <a className="btn btn--gold" data-link="buy" href={siteConfig.buyUrl} target="_blank" rel="noopener noreferrer">Buy $YMB</a>
-          <a className="btn btn--ghost" data-link="chart" href={siteConfig.chartUrl} target="_blank" rel="noopener noreferrer">View Chart</a>
+          <button className="btn btn--ghost" type="button" data-copy-ca aria-live="polite">Copy CA</button>
         </div>
         <a className="hero__community underline-link" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">{siteConfig.xHandle} on X</a>
       </div>
@@ -236,29 +234,7 @@ export default function ReferenceSite() {
       </div>
     </section>
 
-    {/* 07. LIVE CHART */}
-    <section className="chart section" id="chart" aria-labelledby="chart-title">
-      <div className="container">
-        <header className="section-head section-head--split">
-          <div>
-            <p className="eyebrow reveal">04 / The Chart</p>
-            <h2 className="section-title reveal" id="chart-title">The chart<br />speaks.</h2>
-          </div>
-          <p className="lead reveal">The three letters after the move.</p>
-        </header>
-
-        <div className="chart__frame reveal">
-          <iframe className="chart__iframe" data-chart-embed
-                  src={siteConfig.chartEmbedUrl}
-                  title="YMB chart on Dexscreener" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <p className="chart__note" data-chart-pending hidden={siteConfig.isConfigured}>The contract address is pending confirmation. The live chart will appear here once the token is deployed and indexed.</p>
-
-        <a className="btn btn--ghost reveal" data-link="chart" href={siteConfig.chartUrl} target="_blank" rel="noopener noreferrer">View on Dexscreener</a>
-      </div>
-    </section>
-
-    {/* 08. FINAL CTA */}
+    {/* 07. FINAL CTA */}
     <section className="final" aria-labelledby="final-title">
       <div className="container final__inner">
         <h2 className="final__title reveal" id="final-title"><span>Still</span><span>watching?</span></h2>
@@ -284,7 +260,6 @@ export default function ReferenceSite() {
         <nav className="footer__links" aria-label="Footer">
           <a className="underline-link" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">X</a>
           <a className="underline-link" data-link="buy" href={siteConfig.buyUrl} target="_blank" rel="noopener noreferrer">Buy</a>
-          <a className="underline-link" data-link="chart" href={siteConfig.chartUrl} target="_blank" rel="noopener noreferrer">Chart</a>
         </nav>
       </div>
       <div className="footer__legal">
