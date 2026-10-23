@@ -271,10 +271,6 @@ export default function ReferenceSite() {
           <a className="underline-link" data-link="dextools" href={siteConfig.dextoolsUrl} target="_blank" rel="noopener noreferrer">Dextools</a>
         </nav>
       </div>
-      <div className="footer__legal">
-        <p>YMB is a meme token. Nothing on this website constitutes financial advice.</p>
-        <p>Independent parody project. Not affiliated with or endorsed by Donald Trump or any government entity.</p>
-      </div>
     </div>
   </footer>
 
