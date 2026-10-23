@@ -51,6 +51,9 @@ export default function ReferenceSite() {
       </nav>
 
       <div className="nav__actions">
+        <a className="icon-link" data-link="tg" href={siteConfig.tgUrl} target="_blank" rel="noopener noreferrer" aria-label="YMB on Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
         <a className="icon-link" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer" aria-label="YMB on X">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
@@ -65,6 +68,7 @@ export default function ReferenceSite() {
       <nav aria-label="Mobile">
         <a href="#about">About</a>
         <a href="#how-to-buy">How to Buy</a>
+        <a data-link="tg" href={siteConfig.tgUrl} target="_blank" rel="noopener noreferrer">Follow on Telegram</a>
         <a data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">Follow on X</a>
       </nav>
     </div>
@@ -88,7 +92,11 @@ export default function ReferenceSite() {
           <a className="btn btn--gold" data-link="buy" href={siteConfig.buyUrl} target="_blank" rel="noopener noreferrer">Buy $YMB</a>
           <button className="btn btn--ghost" type="button" data-copy-ca aria-live="polite">Copy CA</button>
         </div>
-        <a className="hero__community underline-link" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">{siteConfig.xHandle} on X</a>
+        <p className="hero__community">
+          <a className="underline-link" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">{siteConfig.xHandle} on X</a>
+          <span className="hero__community-sep" aria-hidden="true">·</span>
+          <a className="underline-link" data-link="tg" href={siteConfig.tgUrl} target="_blank" rel="noopener noreferrer">{siteConfig.tgHandle} on Telegram</a>
+        </p>
       </div>
 
       <figure className="hero__figure">
@@ -242,6 +250,7 @@ export default function ReferenceSite() {
         <p className="final__sub reveal">The next click is yours.</p>
         <div className="final__ctas reveal">
           <a className="btn btn--gold btn--lg" data-link="buy" href={siteConfig.buyUrl} target="_blank" rel="noopener noreferrer">Buy $YMB</a>
+          <a className="btn btn--ghost btn--lg" data-link="tg" href={siteConfig.tgUrl} target="_blank" rel="noopener noreferrer">Telegram</a>
           <a className="btn btn--ghost btn--lg" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">Follow on X</a>
         </div>
       </div>
@@ -259,6 +268,7 @@ export default function ReferenceSite() {
         <p className="footer__chain">Ethereum Memecoin</p>
         <nav className="footer__links" aria-label="Footer">
           <a className="underline-link" data-link="x" href={siteConfig.xUrl} target="_blank" rel="noopener noreferrer">X</a>
+          <a className="underline-link" data-link="tg" href={siteConfig.tgUrl} target="_blank" rel="noopener noreferrer">Telegram</a>
           <a className="underline-link" data-link="buy" href={siteConfig.buyUrl} target="_blank" rel="noopener noreferrer">Buy</a>
         </nav>
       </div>

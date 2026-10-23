@@ -30,8 +30,8 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /YMB
-          NEXT_PUBLIC_SITE_URL: https://aaaa-web-deploy.github.io/YMB
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: https://ymb.lat
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

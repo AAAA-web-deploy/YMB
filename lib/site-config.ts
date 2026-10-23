@@ -1,6 +1,7 @@
 /** Edit this file only for token configuration. Never infer a contract address. */
 const contractAddress: string = process.env.NEXT_PUBLIC_TOKEN_CA || ""; // Or paste YOUR 0x... CA here.
-const xUrl = "https://x.com/UMissedBitches"; // Reference account: replace with yours.
+const xUrl = "https://x.com/YouMissedBitch";
+const tgUrl = "https://t.me/ymb2026";
 
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export const assetPath = (path: string) => `${basePath}/${path.replace(/^\//, "")}`;
@@ -21,6 +22,8 @@ export const siteConfig = {
   isConfigured,
   xUrl,
   xHandle: `@${new URL(xUrl).pathname.split("/").filter(Boolean)[0] || "YMB"}`,
+  tgUrl,
+  tgHandle: `@${new URL(tgUrl).pathname.split("/").filter(Boolean)[0] || "ymb2026"}`,
   buyUrl: isConfigured
     ? `https://app.uniswap.org/swap?chain=mainnet&outputCurrency=${contractAddress}`
     : "https://app.uniswap.org/swap?chain=mainnet",
