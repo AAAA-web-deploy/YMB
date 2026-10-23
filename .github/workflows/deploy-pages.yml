@@ -32,7 +32,7 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: ""
           NEXT_PUBLIC_SITE_URL: https://ymb.lat
-          NEXT_PUBLIC_TOKEN_CA: 0x350169fd652d074d33dcf60e2c51037a1a63d7dd
+          NEXT_PUBLIC_TOKEN_CA: "0x350169fd652d074d33dcf60e2c51037a1a63d7dd"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
