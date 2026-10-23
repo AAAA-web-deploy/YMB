@@ -10,6 +10,7 @@ const galleryItems = [
   { file: "g4.jpg", title: "BUY TOMORROW", code: "C-04", span: 4, tall: false, alt: "Gold coin beside sticky notes reading buy tomorrow and definitely buy" },
   { file: "g5.jpg", title: "I WAS WATCHING", code: "C-05", span: 4, tall: false, alt: "Red poster on a wall reading I Was Watching with the gold YMB coin" },
   { file: "g6.jpg", title: "THE CLICK", code: "C-06", span: 4, tall: false, alt: "Gold YMB coin standing next to a computer mouse on a reflective surface" },
+  { file: "g7.png", title: "MISSED THE TRAIN", code: "C-07", span: 8, tall: false, center: true, alt: "Gold YMB coin on a wet train platform bench as a train departs at night" },
 ] as const;
 
 export default function ReferenceSite() {
@@ -112,7 +113,7 @@ export default function ReferenceSite() {
             >
               <div className="gallery-card__media">
                 <img
-                  className="gallery-card__img"
+                  className={`gallery-card__img${"center" in item && item.center ? " gallery-card__img--center" : ""}`}
                   src={assetPath(`assets/gallery/${item.file}`)}
                   alt={item.alt}
                   loading="lazy"
